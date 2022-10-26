@@ -1,14 +1,28 @@
 <template>
- <div class="home">
-  <h2>Home</h2>
-  <img alt="Vue logo" src="../assets/logo.svg">
- </div> 
+  <div class="home">
+    <Carousel/>
+
+    <div class="card" style="width: 18rem;">
+      <img src="..." class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+</div>
+  </div> 
 </template>
 
 
 <script>
+import Carousel from '../components/Carousel.vue'
+
+//@ is an alias to /src
+
 export default {
   name: 'HomeView',
-  components: { }
+  components: { 
+    Carousel
+  }
 }
 </script>
