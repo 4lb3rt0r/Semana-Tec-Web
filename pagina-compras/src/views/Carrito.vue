@@ -46,7 +46,7 @@
       flex-direction: column;
       width: 800px;
       color: black;
-      padding: 100px;
+      padding: 50px;
       background-color: #eeeeee;
       margin-top: 30px;
       border-radius: 10px;
