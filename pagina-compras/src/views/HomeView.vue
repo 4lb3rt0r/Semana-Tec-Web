@@ -2,7 +2,7 @@
   <div class="home">
     <Carousel/>
 
-    <h1 class="px-3 py-4">Para tu despensa</h1>
+    <h1 class="px-5 py-4">Para tu despensa</h1>
 
     <Products/>
   </div> 
