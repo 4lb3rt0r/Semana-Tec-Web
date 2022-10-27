@@ -19,6 +19,13 @@
                         </span>
                     </RouterLink>
                 </div>
+                <div class="col">
+                    <RouterLink to="/login" class="nav-link">
+                        <span class="material-icons">
+                            person
+                        </span>
+                    </RouterLink>
+                </div>
             </div>
         </div>
     </nav>
