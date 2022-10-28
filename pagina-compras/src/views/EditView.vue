@@ -3,7 +3,7 @@
         <div class = "container">
             <div class = "row">
                 <div class="col-md-6 offset-md 3">
-                    <h2>Edit Item</h2>
+                    <h2>Editar el producto</h2>
                     <form @submit.prevent="updateItem">
                     <div class="form-group">
                         <input 
