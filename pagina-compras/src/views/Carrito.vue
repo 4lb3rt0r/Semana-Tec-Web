@@ -30,6 +30,9 @@
 </template>
 
 <script>
+  import { db } from '../firebase'
+  import { getDocs, collection } from 'firebase/firestore'
+
   export default {
       name: "login"
   }

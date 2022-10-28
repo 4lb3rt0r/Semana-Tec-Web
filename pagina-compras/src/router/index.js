@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import AdminView from '../views/AdminView.vue'
+import AddItemView from '../views/AddItemView.vue'
+import EditView from '../views/EditView.vue'
 import { getAuth } from "firebase/auth";
 
 const router = createRouter({
@@ -10,6 +13,21 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
       meta: {requiresAuth: true}
+    },
+    {
+      path: '/admin',
+      name: 'admin',
+      component: AdminView
+    },
+    {
+      path: '/add-item',
+      name: 'addItem',
+      component: AddItemView
+    },
+    {
+      path: '/products/:id',
+      name: 'editItem',
+      component: EditView
     },
     {
       path: '/shopping-cart',
