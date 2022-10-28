@@ -5,9 +5,9 @@
                     <div class="card" style="width: 14rem;">
                         <img :src=product.urlImg class="card-img-top" alt="...">
                         <div class="card-body">
-                        <h5 class="card-title">{{product.nombre}}</h5>
-                        <p class="card-text">Precio: $ {{product.precio}}</p>
-                        <a href="#" class="btn btn-primary">Añadir al carrito</a>
+                            <h5 class="card-title">{{product.nombre}}</h5>
+                            <p class="card-text">Precio: $ {{product.precio}}</p>
+                            <button href="#" class="btn btn-primary">Añadir al carrito</button>
                         </div>
                     </div>
                 </div>
@@ -16,8 +16,9 @@
 </template>
 
 <script>
-    import { db } from '../firebase';
+    import { db, auth } from '../firebase';
     import { getDocs, collection } from 'firebase/firestore';
+    import { onAuthStateChanged } from "firebase/auth";
 
     export default {
         name: "Products",
@@ -28,7 +29,8 @@
                 product: {
                     nombre: '',
                     precio: '',
-                    urlImg: ''
+                    urlImg: '',
+                    uid: ''
                 }
             }
         },
@@ -39,9 +41,9 @@
                     let product = doc.data();
                     product.id = doc.id;
                     this.products.push(product);
-                    console.log(product);
+                    // console.log(product);
                 });
-            },
+            }
         },
         mounted() {
             this.fetchProducts();
