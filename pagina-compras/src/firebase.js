@@ -4,10 +4,6 @@ import { getFirestore, collection } from 'firebase/firestore'
 import { getAuth } from "firebase/auth";
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/storage';
-import { getFirestore } from 'firebase/firestore'
-import { getAuth } from "firebase/auth";
-import firebase from 'firebase/compat/app';
-import 'firebase/compat/storage';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
@@ -23,10 +19,6 @@ const firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 
 const app = initializeApp(firebaseConfig);
-export const db = getFirestore(app);
-
-export const auth = getAuth();
-=======
 const db = getFirestore(app);
 const productsCollection = collection(db, 'products');
 const auth = getAuth();
