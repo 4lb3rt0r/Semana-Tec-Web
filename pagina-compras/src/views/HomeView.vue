@@ -2,27 +2,24 @@
   <div class="home">
     <Carousel/>
 
-    <div class="card" style="width: 18rem;">
-      <img src="..." class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-</div>
+    <h1 class="px-5 py-4">Para tu despensa</h1>
+
+    <Products/>
   </div> 
 </template>
 
 
 <script>
 import Carousel from '../components/Carousel.vue'
+import Products from '../components/Products.vue'
 
 //@ is an alias to /src
 
 export default {
   name: 'HomeView',
   components: { 
-    Carousel
+    Carousel,
+    Products
   }
 }
 </script>
